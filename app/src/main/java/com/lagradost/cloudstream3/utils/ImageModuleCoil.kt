@@ -40,7 +40,7 @@ object ImageLoader {
         val isBrokenHardware = hasPotentialBrokenHardware()
         return ImageLoader.Builder(context)
             .crossfade(200)
-            .allowHardware(SDK_INT >= 28 && !isBrokenHardware)
+            .allowHardware(false)
             .diskCachePolicy(CachePolicy.ENABLED)
             .networkCachePolicy(CachePolicy.ENABLED)
             .memoryCache {
